@@ -1,0 +1,29 @@
+﻿@model dojosurveymvc.Models.Survey;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+   <div class="container">
+        
+    <form asp-action="Create" method="POST">
+        <h2>Dojo Survey</h2>
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"></label>
+        <input asp-for="Name">  
+        <span asp-validation-for="Location"></span>  
+        <label asp-for="Location"></label>
+        <input asp-for="Location">
+        <label asp-for="Favorite"></label>
+        <select asp-for="Favorite" >
+            <option value="" disabled selected></option>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        <label asp-for="Comment"></label>
+        <span asp-validation-for="Comment"></span>
+        <textarea asp-for="Comment" cols="100" rows="10" placeholder="Additional comments (optional)"></textarea>
+        <button>Submit</button>
+          </form>
+    </div>
+        
